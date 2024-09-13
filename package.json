@@ -1,0 +1,14 @@
+{
+  "name": "hanoi-api",
+  "version": "1.0.0",
+  "description": "API to solve hanoi tower",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Sergio J Cerezo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
