@@ -1,7 +1,9 @@
 const express = require('express');
 const { performance } = require('perf_hooks');
+const cors = require('cors');
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
@@ -12,7 +14,7 @@ app.post('/hanoi', (req, res) => {
     const startTime = performance.now();
     const solutionSteps = towerOfHanoi(req.body.numberOfDisks, 'A', 'C', 'B', []);
     const endTime = performance.now();
-    
+
     res.json({
         numberOfSteps: solutionSteps.length, 
         millisecondsToSolve: endTime - startTime, 
